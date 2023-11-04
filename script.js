@@ -77,9 +77,19 @@ function addData(newData) {
   count++
 }
 setInterval(() => {
-  for(let i=0;i<chartdata.length;i++){
-    addData(chartdata[i])
-    console.log(chartdata[i]);
-  }
+  call();
 
-}, 2000);
+},1000);
+let i=0,j=0;
+let flag=false
+function call(){
+  
+
+    addData(chartdata[i]+j)
+    console.log(chartdata[i]);
+    i++;
+    if(i==chartdata.length){
+      i=0
+      j+=0.2;
+    }
+}
